@@ -16,7 +16,7 @@ the original string. You can assume the string has only uppercase and lowercase 
     from Java, alloc a stringBuilder, if cur end char in builder is not the one loop in s, append count and append new char
      */
 
-    String compression(String s) {
+    public String compression(String s) {
         if (s == null) return s;
         StringBuilder builder = new StringBuilder();
         int count = 0;

@@ -10,7 +10,7 @@ EXAMPLE
 pale, ple -> true pales, pale -> true pale, bale -> true pale, bake -> false
      */
 
-    boolean oneWay(String s, String p) {
+    public boolean oneWay(String s, String p) {
         if (s == null && p == null) return true;
         if (s == null || p == null || s.length() != p.length()) return false;
         HashMap<Character, Integer> map = new HashMap<>();

@@ -6,7 +6,7 @@ public class Zero_Matrix {
     Write an algorithm such that if an element in an MxN matrix is 0, its entire row and column are set to 0.
      */
 
-    void setTo0(int[][] matrix) {
+    public void setTo0(int[][] matrix) {
         if (matrix == null || matrix.length == 0) throw new NullPointerException();
         int row = matrix.length, col = matrix[0].length;
         boolean[][] zeroMatrix = new boolean[row][col];

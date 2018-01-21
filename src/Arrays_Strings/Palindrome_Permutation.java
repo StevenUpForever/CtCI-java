@@ -11,7 +11,7 @@ Input: Tact Coa
 Output: True (permutations: "taco cat", "atco eta", etc.)
      */
 
-    boolean isPaliPerm(String s, String p) {
+    public boolean isPaliPerm(String s, String p) {
         if (!isPal(s)) return false;
         if (s == null && p == null) return true;
         if (s == null || p == null || s.length() != p.length()) return false;

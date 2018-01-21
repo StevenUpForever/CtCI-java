@@ -6,7 +6,7 @@ public class Rotate_Matrix {
     Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes, write a method to rotate the image by 90 degrees. Can you do this in place?
      */
 
-    void rotate(int[][] matrix) {
+    public void rotate(int[][] matrix) {
         if (matrix == null || matrix.length <= 1) return;
         int len = matrix.length;
         for (int i = 0; i < len/2; i++) { //len/2是offset，最多到1/2为起点
