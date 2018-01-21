@@ -21,7 +21,7 @@ other.
     Space: O(n)
      */
 
-    boolean isPermutation(String s, String p) {
+    public boolean isPermutation(String s, String p) {
         if (s == null && p == null) return true;
         if (s == null || p == null || s.length() != p.length()) return false;
         HashMap<Character, Integer> map = new HashMap<>();

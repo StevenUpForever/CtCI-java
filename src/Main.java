@@ -1,10 +1,10 @@
 import java.util.HashSet;
-import Arrays_Strings.Is_Unique;
+import Arrays_Strings.URLify;
 
 public class Main {
 
     public static void main(String[] args) {
-        Is_Unique obj = new Is_Unique();
-        System.out.println(obj.isUnique("abcdefa"));
+        URLify obj = new URLify();
+        System.out.println(obj.URLify(" Mr John Smith    "));
     }
 }
