@@ -43,5 +43,23 @@ public class Is_Unique {
         return true;
     }
 
+    /*
+    If no extra space, and chars all within a - z
+     */
+
+    public boolean isUnique3(String s) {
+        if (s == null) return true;
+        //用int表示array，用bit operation来检查重复
+        int bit = 0;
+        for (int i = 0; i < s.length(); i++) {
+            int val = s.charAt(i) - 'a';
+            //其他位都是 0&0 or 0&1 = 0，比较位如果是1表示原来是1，则重复了
+            if ((1 << val & bit) > 0) return false;
+            //在此为加1
+            bit |= 1 << val;
+        }
+        return true;
+    }
+
 
 }
