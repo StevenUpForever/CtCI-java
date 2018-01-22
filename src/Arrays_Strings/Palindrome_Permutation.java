@@ -45,4 +45,10 @@ Output: True (permutations: "taco cat", "atco eta", etc.)
         return true;
     }
 
+    /*
+    Better solution: since we need represent how many chars have odd frequency, max should be 1
+    use 1 number represent it, at last, the number should be 0 or only 1 bit of 1, 000100000 与0是2的倍数是一样的，
+    所以return num == 0 || (num & (num - 1) == 0)
+     */
+
 }

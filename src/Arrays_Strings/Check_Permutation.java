@@ -21,6 +21,10 @@ other.
     Space: O(n)
      */
 
+    /*
+    ****** Ask if Case sensitive, and if whitespace is significant ******
+     */
+
     public boolean isPermutation(String s, String p) {
         if (s == null && p == null) return true;
         if (s == null || p == null || s.length() != p.length()) return false;

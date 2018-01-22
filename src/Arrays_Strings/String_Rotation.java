@@ -8,11 +8,17 @@ public class String_Rotation {
 
     /*
     Solution:
-    loop the string, check s[i-1]=p[0] && s[i]=p[len-1], if so, compare each part
+    if x can rotate to y, then y is substring of xx
      */
 
     public boolean isRotated(String origin, String rotate) {
+        if (origin == null && rotate == null) return true;
+        if (origin == null || rotate == null || origin.length() != rotate.length())return false;
+        return isSubstring(origin + origin, rotate);
+    }
 
+    boolean isSubstring(String s, String p) {
+        return true;
     }
 
 

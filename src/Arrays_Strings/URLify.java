@@ -11,6 +11,8 @@ EXAMPLE
 Input: "Mr John Smith ", 13 Output: "Mr%20John%20Smith"
      */
 
+
+
     /*
     for loop the string, put all words in a string array
     append strings in array together and add %20 between each other
