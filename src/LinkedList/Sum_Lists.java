@@ -53,19 +53,9 @@ lnput:(6 -> 1 -> 7) + (2 -> 9 -> 5).That is,617 + 295. Output:9 -> 1 -> 2.Thatis
         return builder.length() == 0 ? 0 : Integer.parseInt(builder.reverse().toString());
     }
 
-    public int sumList3(ListNode o1, ListNode o2) {
-        int res = 0, tenBit = 0;
-        while (o1 != null || o2 != null) {
-            int num1 = o1 == null ? 0 : o1.value;
-            int num2 = o2 == null ? 0 : o2.value;
-            int sum = num1 + num2;
-            res += sum / 10;
-            res = res * 10 + sum%10;
-            if (o1 != null) o1 = o1.next;
-            if (o2 != null) o2 = o2.next;
-        }
-        if (tenBit > 0) res = res * 10 + tenBit;
-        return res;
-    }
+    /*
+    key point: 需要对应，正顺序时，第一位的两个数可能相加时不是同一位置
+    用recursion来做，可以从最后位开始相加
+     */
 
 }

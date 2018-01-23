@@ -27,4 +27,11 @@ public class Palindrome {
         return pre;
     }
 
+    /*
+    solution 2:
+    用stack，slow fast pointer，slow 都push到stack里边，然后从stack里pop与fast相比较（fast此时应该move by 1）
+     */
+
+    //TODO: recursion solution 3
+
 }
