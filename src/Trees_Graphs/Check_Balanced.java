@@ -16,7 +16,8 @@ public class Check_Balanced {
         if (root == null) return 0;
         int left = isBalancedHelper(root.left);
         int right = isBalancedHelper(root.right);
-        if (Math.abs(left - right) > 1) return Integer.MAX_VALUE;
+        if (left == Integer.MAX_VALUE || right == Integer.MAX_VALUE || Math.abs(left - right) > 1)
+            return Integer.MAX_VALUE;
         return Math.max(left, right) + 1;
     }
 
