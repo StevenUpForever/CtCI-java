@@ -15,9 +15,10 @@ public class Successor {
     TreeNode nextNode(TreeNode node) {
         if (node == null) return node;
         if (node.right != null) return node.right;
-        else {
-            while (node.key )
-        }
+//        else {
+//            while (node.key )
+//        }
+        return null;
     }
 
 }
