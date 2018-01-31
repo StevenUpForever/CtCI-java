@@ -14,8 +14,14 @@ public class Successor {
      */
     TreeNode nextNode(TreeNode node) {
         if (node == null) return node;
+        /*
+        当右子树不为null时，比如在左子树但是有右子树，or在右子树，找右子树的最左点
+         */
         if (node.right != null) return leftMost(node.right);
         else {
+            /*
+            如果没有右子树，需要找到parent node 在其右边的第一个
+             */
             TreeNode p = node.parent;
             while (p != null && p.left != node) {
                 node = p;
