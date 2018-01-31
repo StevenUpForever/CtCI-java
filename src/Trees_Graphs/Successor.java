@@ -14,11 +14,20 @@ public class Successor {
      */
     TreeNode nextNode(TreeNode node) {
         if (node == null) return node;
-        if (node.right != null) return node.right;
-//        else {
-//            while (node.key )
-//        }
-        return null;
+        if (node.right != null) return leftMost(node.right);
+        else {
+            TreeNode p = node.parent;
+            while (p != null && p.left != node) {
+                node = p;
+                p = p.parent;
+            }
+            return p;
+        }
+    }
+
+    private TreeNode leftMost(TreeNode root) {
+        while (root != null && root.left != null) root = root.left;
+        return root;
     }
 
 }
