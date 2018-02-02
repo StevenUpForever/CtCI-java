@@ -8,9 +8,21 @@ public class Insertion {
 Input: N 10000000000, M 10011, i 2, j 6 Output:N = 10001001100
      */
 
+    /*
+    1. clean bit of n from i to j to 1
+    2. shift m by i bits
+    3. AND n and m
+     */
+
     int insertion(int n, int m, int i, int j) {
-        return n | (m << i);
+        int bit = 1 << i;
+        for (int num = i; num <= j; num++) {
+            n |= bit;
+            bit <<= 1;
+        }
+        return n & (m << i);
     }
+
 
 
 
