@@ -12,10 +12,9 @@ public class RobotInAGrid {
 
     public List<Cell> robotInAGrid(Cell[][] matrix) {
         List<Cell> list = new LinkedList<>();
-        int r = matrix.length;
-        if (r == 0) return list;
-        int c = matrix[0].length;
-
+        if (matrix.length == 0 || matrix[0].length == 0) return list;
+        robotInAGridHelper(matrix, list, matrix[0][0]);
+        return list;
     }
 
     private void robotInAGridHelper(Cell[][] matrix, List<Cell> list, Cell cell) {
