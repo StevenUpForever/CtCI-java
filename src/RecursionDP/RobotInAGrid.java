@@ -1,6 +1,7 @@
 package RecursionDP;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -18,15 +19,22 @@ public class RobotInAGrid {
     }
 
     private void robotInAGridHelper(Cell[][] matrix, List<Cell> list, Cell cell) {
-        if (!cell.isValid) return;
-        if (cell.x == matrix.length - 1 && cell.y == matrix[0].length - 1) {
-            list.add(cell);
-            return;
-        }
+        if (!cell.isValid || cell.x >= matrix.length || cell.y >= matrix[0].length) return;
         list.add(cell);
         if (cell.x < matrix.length) robotInAGridHelper(matrix, list, matrix[cell.x + 1][cell.y]);
         if (cell.y < matrix[0].length) robotInAGridHelper(matrix, list, matrix[cell.x][cell.y + 1]);
         list.remove(list.size() - 1);
+    }
+
+    //Only if we return true/false that found a path, otherwise cannot use hashSet
+    private void robotInAGridHelper2(Cell[][] matrix, List<Cell> list, Cell cell, HashSet<Cell> set) {
+        if (!cell.isValid || cell.x >= matrix.length || cell.y >= matrix[0].length) return;
+        if (set.add(cell)) {
+            list.add(cell);
+            if (cell.x < matrix.length) robotInAGridHelper(matrix, list, matrix[cell.x + 1][cell.y]);
+            if (cell.y < matrix[0].length) robotInAGridHelper(matrix, list, matrix[cell.x][cell.y + 1]);
+            list.remove(list.size() - 1);
+        }
     }
 
     class Cell {
