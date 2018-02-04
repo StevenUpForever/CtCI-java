@@ -22,4 +22,14 @@ public class TripleStep {
         }
     }
 
+    private int tripStepHelper2(int n, int cur, int res, int[] arr) {
+        if (n < 0) return 0;
+        if (n == 0) return 1;
+        if (arr[cur] != -1) return arr[cur];
+        for (int i = 1; i <= 3; i++) {
+            arr[cur] += tripStepHelper2(n, cur + i, res, arr);
+        }
+        return arr[cur];
+    }
+
 }
