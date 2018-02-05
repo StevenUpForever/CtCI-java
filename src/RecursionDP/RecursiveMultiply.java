@@ -9,8 +9,8 @@ public class RecursiveMultiply {
     int recursiveMultiply(int m, int n) {
         if (n == 0) return 0;
         if (n == 1) return m;
-        m = n % 2 == 0 ? m << 1 : m << 1 + n;
-        return recursiveMultiply(m, n/2);
+        int half = recursiveMultiply(m, n/2);
+        return n % 2 == 0 ? half + half : half + half + n;
     }
 
 }
