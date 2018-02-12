@@ -1,2 +1,2 @@
-# CtCI_Java
+# CtCI-java
 Cracking the Coding Interview Coding training in Java
