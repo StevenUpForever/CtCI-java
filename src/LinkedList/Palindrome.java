@@ -2,6 +2,8 @@ package LinkedList;
 
 import PublicClass.ListNode;
 
+import java.util.Stack;
+
 public class Palindrome {
     /*
     Implement a function to check if a linked list is a palindrome.
@@ -39,8 +41,10 @@ public class Palindrome {
             slow = slow.next;
             fast = fast.next.next;
         }
-        slow = fast != null ? slow.next : slow;
-        while ()
+        while (!stack.isEmpty() && slow != null) {
+            if (slow.value != stack.pop().value) return false;
+        }
+        return true;
     }
 
 }
