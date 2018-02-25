@@ -29,9 +29,18 @@ public class Palindrome {
 
     /*
     solution 2:
-    用stack，slow fast pointer，slow 都push到stack里边，然后从stack里pop与fast相比较（fast此时应该move by 1）
+    用stack，slow fast pointer，slow 都push到stack里边，然后从stack里pop与slow++相比较
      */
-
-    //TODO: recursion solution 3
+    public boolean palindromeS2(ListNode head) {
+        Stack<ListNode> stack = new Stack<>();
+        ListNode slow = head, fast = head;
+        while (fast.next != null) {
+            stack.push(slow);
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        slow = fast != null ? slow.next : slow;
+        while ()
+    }
 
 }
