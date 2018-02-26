@@ -1,8 +1,8 @@
-package Arrays_Strings;
+package arrays_strings;
 
 import java.util.HashMap;
 
-public class Check_Permutation {
+public class CheckPermutation {
 
     /*
     Given two strings,write a method to decide if one is a permutation of the
