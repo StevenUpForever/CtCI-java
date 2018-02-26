@@ -1,8 +1,8 @@
-package Stacks_Queues;
+package stacks_queues;
 
 import java.util.Stack;
 
-public class Queue_via_Stacks {
+public class QueueViaStacks {
 
     /*
     Implement a MyQueue class which implements a queue using two stacks.
