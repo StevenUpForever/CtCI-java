@@ -1,10 +1,10 @@
-package LinkedList;
+package linked_list;
 
 import PublicClass.ListNode;
 
 import java.util.HashSet;
 
-public class Remove_Dups {
+public class RemoveDups {
     /*
     Write code to remove duplicates from an unsorted linked list.
      */
@@ -34,14 +34,12 @@ public class Remove_Dups {
     public ListNode removeDup2(ListNode head) {
         ListNode res = head;
         while (head != null) {
-            ListNode cur = head.next, pre = head;
-            while (cur != null) {
-                if (head.value == cur.value) {
-                    pre.next = cur.next;
-                    cur = null;
-                }
-                pre = cur;
-                cur = cur.next;
+            ListNode cur = head;
+            while (cur.next != null) {
+                if (cur.next.value != head.value) {
+                    //Stop cur at here, not sure if next one is dup again
+                    cur.next = cur.next.next;
+                } else cur = cur.next;
             }
             head = head.next;
         }
