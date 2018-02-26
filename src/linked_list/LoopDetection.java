@@ -4,7 +4,7 @@ import PublicClass.ListNode;
 
 import java.util.HashSet;
 
-public class Loop_Detection {
+public class LoopDetection {
 
     /*
     Given a circular linked list, implement an algorithm that returns the node at the

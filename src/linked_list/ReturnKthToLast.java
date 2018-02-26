@@ -2,7 +2,7 @@ package linked_list;
 
 import PublicClass.ListNode;
 
-public class Return_Kth_to_Last {
+public class ReturnKthToLast {
 
     /*
     Implement an algorithm to find the kth to last element of a singly linked list.
