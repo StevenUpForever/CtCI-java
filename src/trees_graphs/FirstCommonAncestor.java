@@ -2,7 +2,7 @@ package trees_graphs;
 
 import public_class.TreeNode;
 
-public class First_Common_Ancestor {
+public class FirstCommonAncestor {
 
     public TreeNode LCA(TreeNode root, TreeNode a, TreeNode b) {
         if (root == null || root == a || root == b) return root;
