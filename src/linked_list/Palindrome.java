@@ -1,6 +1,6 @@
 package linked_list;
 
-import PublicClass.ListNode;
+import public_class.ListNode;
 
 import java.util.Stack;
 
