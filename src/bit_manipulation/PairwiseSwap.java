@@ -10,7 +10,7 @@ public class PairwiseSwap {
     use mask 1010101010 and 0101010101 AND x
      */
     int swap(int x) {
-        return (x & 0xaaaaaaaa >> 1) | (x & 0x55555555 << 1);
+        return ((x & 0xaaaaaaaa) >> 1) | ((x & 0x55555555) << 1);
     }
 
 }
