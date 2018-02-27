@@ -2,10 +2,18 @@ package trees_graphs;
 
 import public_class.TreeNode;
 
-public class Check_Balanced {
+public class CheckBalanced {
 
     /*
     Implement a function to check if a binary tree is balanced. For the purposes of this question, a balanced tree is de ned to be a tree such that the heights of the two subtrees of any node never differ by more than one.
+     */
+
+    /*
+    Use Tree bottom up, get current height, if any left height or right height is Int.max or diff larger than 1
+    then return int.max, otherwise return max(left, right) + 1, at last, check final height is int.max or not
+
+    Time: O(n)
+    Space: O(n)
      */
 
     boolean isBalanced(TreeNode root) {
