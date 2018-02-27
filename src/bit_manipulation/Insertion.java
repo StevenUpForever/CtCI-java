@@ -16,14 +16,18 @@ Input: N 10000000000, M 10011, i 2, j 6 Output:N = 10001001100
 
     int insertion(int n, int m, int i, int j) {
         int bit = 1 << i;
+        //Key point: clean up i to j bits to all 1 for & m
         for (int num = i; num <= j; num++) {
             n |= bit;
             bit <<= 1;
         }
+        //Move m by i bits
         return n & (m << i);
     }
 
-
+    /*
+    Another same solution is clean up i to j bits to all 0, and | m << i
+     */
 
 
 }
