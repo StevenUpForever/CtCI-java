@@ -3,7 +3,7 @@ package trees_graphs;
 
 import public_class.TreeNode;
 
-public class Minimal_Tree {
+public class MinimalTree {
 
     /*
     Given a sorted (increasing order) array with unique integer elements, write an algo­
@@ -12,6 +12,9 @@ rithm to create a binary search tree with minimal height.
 
     /*
     Min height use mid value as current root, and recursively build left and right sub tree depends on current scope values
+
+    Time: O(n)
+    Space: O(logn)
      */
 
     public TreeNode buildBST(int[] array) {
