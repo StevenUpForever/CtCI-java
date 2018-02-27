@@ -5,10 +5,19 @@ import public_class.GraphNode;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Route_Between_Nodes {
+public class RouteBetweenNodes {
 
     /*
     Given a directed graph, design an algorithm to  find out whether there is a route between two nodes.
+     */
+
+    /*
+    Solution:
+    Use breadth first search, when find one node, mark a boolean value to true, when find another node, and
+    boolean value is true, return true
+
+    Time: O(n)
+    Space: O(n) if all nodes belongs to root.neighbors
      */
 
     boolean route(GraphNode root, GraphNode a, GraphNode b) {
