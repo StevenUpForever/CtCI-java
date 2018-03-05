@@ -6,6 +6,10 @@ public class RecursiveMultiply {
     Write a recursive function to multiply two positive integers without using the *operator.You can use addition, subtraction, and bit shifting, but you should minimize the number of those operations.
      */
 
+    /*
+    *** Similar to power of 2 ***
+     */
+
     int recursiveMultiply(int m, int n) {
         if (n == 0) return 0;
         if (n == 1) return m;

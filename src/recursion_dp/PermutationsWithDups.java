@@ -16,6 +16,9 @@ public class PermutationsWithDups {
         return list;
     }
 
+    /*
+    用HashMap来filter因为同样重复的char会在此一层的之后某一层开始swap，不需要本层swap，所以swap重复了
+     */
     private void allPermutationsHelper(List<String> res, char[] chars, int index) {
         if (index >= chars.length) {
             res.add(chars.toString());

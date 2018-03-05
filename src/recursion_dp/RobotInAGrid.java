@@ -10,6 +10,10 @@ public class RobotInAGrid {
     Imagine a robot sitting on the upper left corner of grid with r rows and c columns. The robot can only move in two directions, right and down, but certain cells are "off limits" such that the robot cannot step on them. Design an algorithm to find a path for the robot from the top left to the bottom right.
      */
 
+    /*
+    BFS, 遍历每一个cell一次，看是否能遍历到最终cell
+     */
+
     public List<Cell> robotInAGrid(Cell[][] matrix) {
         List<Cell> list = new LinkedList<>();
         if (matrix.length == 0 || matrix[0].length == 0) return list;
