@@ -8,4 +8,6 @@ EXAMPLE
 countEval("l  01011", false) -> 2 countEval("0&0&0&1 ll0", true) -> 10
      */
 
+    //TODO: Solution
+
 }
