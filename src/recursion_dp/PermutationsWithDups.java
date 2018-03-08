@@ -19,6 +19,7 @@ public class PermutationsWithDups {
 
     /*
     用HashMap来filter因为同样重复的char会在此一层的之后某一层开始swap，不需要本层swap，所以swap重复了
+
      */
     private void allPermutationsHelper(List<String> res, char[] chars, int index) {
         if (index >= chars.length) {
@@ -31,8 +32,9 @@ public class PermutationsWithDups {
                 swap(chars, i, index);
                 set.add(chars[i]);
                 allPermutationsHelper(res, chars, index + 1);
+                //因为本层只swap一个char，所以在1与3swap之前需要将1和2swap回去
                 swap(chars, i, index);
-                set.remove(chars[i]);
+                //注意不要将char从set里删除，否则不能删选之后重复的部分
             }
         }
     }
