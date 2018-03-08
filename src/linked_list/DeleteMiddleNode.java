@@ -16,7 +16,6 @@ Result: nothing is returned, but the new linked list looks likea->b->d->e- >f
      */
 
     ListNode removeMid(ListNode head) {
-        ListNode res = head;
         ListNode slow = head, fast = head;
         ListNode pre = null;
         while (fast.next != null && fast.next.next != null) {
@@ -27,7 +26,7 @@ Result: nothing is returned, but the new linked list looks likea->b->d->e- >f
         if (slow != head && slow != null && slow.next != null) {
             pre.next = slow.next;
         }
-        return res;
+        return head;
     }
 
 }
