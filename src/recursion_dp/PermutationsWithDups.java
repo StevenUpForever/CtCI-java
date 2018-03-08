@@ -7,7 +7,8 @@ import java.util.List;
 public class PermutationsWithDups {
 
     /*
-    Write a method to compute all permutations of a string whose charac­ ters are not necessarily unique. The list of permutations should not have duplicates.
+    Write a method to compute all permutations of a string whose characters are not necessarily unique.
+    The list of permutations should not have duplicates.
      */
 
     public List<String> allPermutations(String s) {
@@ -21,7 +22,7 @@ public class PermutationsWithDups {
      */
     private void allPermutationsHelper(List<String> res, char[] chars, int index) {
         if (index >= chars.length) {
-            res.add(chars.toString());
+            res.add(new String(chars));
             return;
         }
         HashSet<Character> set = new HashSet<>();
