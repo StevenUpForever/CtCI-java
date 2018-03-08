@@ -7,13 +7,22 @@ public class SumLists {
     /*
     You have two numbers represented by a linked list, where each node contains a single digit.The digits are stored in reverse order, such that the 1 's digit is at the head of the list. Write a function that adds the two numbers and returns the sum as a linked list.
 EXAMPLE
-Input:(7-> 1 -> 6) + (5 -> 9 -> 2).Thatis,617 + 295. Output:2 -> 1 -> 9.Thatis,912.
+Input:(7-> 1 -> 6) + (5 -> 9 -> 2).Thatis,617 + 295. Output:2 -> 1 -> 9.That is,912.
 FOLLOW UP
 Suppose the digits are stored in forward order. Repeat the above problem. EXAMPLE
-lnput:(6 -> 1 -> 7) + (2 -> 9 -> 5).That is,617 + 295. Output:9 -> 1 -> 2.Thatis,912.
+lnput:(6 -> 1 -> 7) + (2 -> 9 -> 5).That is,617 + 295. Output:9 -> 1 -> 2.That is,912.
      */
 
-    //O(max(m, n))
+    /*
+    Solution:
+    1. 比较两个list的长度，将短的放在arg的前边
+    2. 在helper中，因为要考虑到进位的问题，*** similar to reverse linkedList recursively ***
+    将步骤交给子问题去做，只要当前层的node和next，if (next > 10) next %= 10, node++
+    3. 最后，helper结束后，res.next = recursion, res可能也需要进位，再check一下，然后return res or res.next
+
+    Time: O(max(m, n))
+    Space: O(max(m, n))
+     */
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode temp1 = l1, temp2 = l2;
         int len1 = 0, len2 = 0;
