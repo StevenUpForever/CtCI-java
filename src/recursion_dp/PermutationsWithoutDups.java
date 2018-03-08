@@ -17,7 +17,7 @@ public class PermutationsWithoutDups {
 
     private void allPermutationsHelper(List<String> res, char[] chars, int index) {
         if (index >= chars.length) {
-            res.add(chars.toString());
+            res.add(new String(chars));
             return;
         }
         for (int i = index; i < chars.length; i++) {
