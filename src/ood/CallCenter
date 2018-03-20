@@ -1,0 +1,45 @@
+Call Center: Imagine you have a call center with three levels of employees: respondent, manager, and director.
+An incoming telephone call must be  rst allocated to a respondent who is free.
+If the respondent can't handle the call, he or she must escalate the call to a manager.
+If the manager is not free or not able to handle it, then the call should be escalated to a director.
+Design the classes and data structures for this problem. Implement a method dispatchCall ()
+which assigns a call to the first available employee.
+
+1. Core Objects
+
+Respondent
+Manager
+Director
+
+2. Relation
+
+3. Action & design
+
+employee:
+boolean isAvaliable
+boolean takeCall()
+void hangoutCall()
+
+respondent extends employee:
+int priority
+enum type
+
+manager extends employee:
+int priority
+enum type
+
+director extends employee:
+int priority
+enum type
+
+dispatchCall():
+key point is use queue for respondent, manager and director, and assign by priority
+加上set放take call的employee
+维护三个queue，和一个set
+
+当employee take call, 从list start 拿第一个，放到set
+当employee hangout call，从set delete，放到queue end
+当respondent queue is empty，同样步骤manager queue， director queue
+
+
+
