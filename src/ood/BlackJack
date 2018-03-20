@@ -1,0 +1,33 @@
+1. core objects
+
+Card -> Black Jack card
+Card Deck
+Player -> Black Jack player
+BlackJack Animator
+
+2. Relation
+
+Card Deck 1:n Card
+Player 1:1 Card Deck
+Animator Singleton
+
+3. Action, interface
+
+Card:
+int value
+enum type
+
+BlackJackCard extends Card:
+int[] potentialValues 因为A可以是 1 or 11
+
+Card Deck:
+Card[] cards
+
+Player:
+CardDeck deck
+
+BlackJackPlayer:
+int[] potentialValues
+boolean isWin
+boolean isBust
+
