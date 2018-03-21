@@ -1,0 +1,24 @@
+Jukebox: Design a musical jukebox using object-oriented principles.
+
+1. Ask questions
+e.g. if Jukebox could play CD, mp3
+if it's a digital simulator or physical jukebox
+If it's free or not
+
+2. Core objects
+Depends on it's s digital jukebox
+
+Song
+Artist
+CD
+Playlist
+Player
+
+3. Relation
+
+Song n:1 Artist
+CD 1:n Song
+CD 1:n Playlist
+playlist 1:n song
+player singleton
+
