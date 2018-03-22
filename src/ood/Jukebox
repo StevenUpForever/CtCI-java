@@ -9,10 +9,12 @@ If it's free or not
 Depends on it's s digital jukebox
 
 Song
+int num
 Artist
 CD
 Playlist
 Player
+User
 
 3. Relation
 
@@ -21,4 +23,50 @@ CD 1:n Song
 CD 1:n Playlist
 playlist 1:n song
 player singleton
+Player 1:1 user
+User 1:n CD
+User 1:n playlist
+
+4. action & implementation
+
+Song:
+String name
+int duration
+Enum style
+String lyrics
+Artist artist
+
+Artist:
+String name
+Enum style
+Date EOD
+Song[] songs
+Album[] Albums
+
+Playlist
+int num
+String name
+Song[] songs
+Song getSong(int index)
+boolean addSong(Song song)
+boolean deleteSong(Song song)
+boolean deleteSong(int index)
+
+Player
+Image cover
+Song currentSong
+boolean play(Song song)
+boolean pause()
+Song next()
+Song pre()
+boolean stop()
+
+User
+int id
+String username
+String password
+Playlist[] playlists
+Artist[] favouriteArtists
+cd[] cds
+
 
